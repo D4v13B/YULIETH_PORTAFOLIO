@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://D4v13B.github.io/YULIETH_PORTAFOLIO/",
+  "homepage": "http://yuliethanais.makeup/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 
+/** Rutas de `public/` deben incluir el base de Vite (p. ej. GitHub Pages en /REPO/). */
+const pub = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`
+
 type Theme = 'light' | 'dark'
 
 function getStoredTheme(): Theme | null {
@@ -33,17 +36,17 @@ function App() {
       items: [
         {
           title: 'Avatar',
-          src: '/img/6.jpeg',
+          src: pub('img/6.jpeg'),
           note: 'Contrastes fríos + detalle artístico para un look editorial.',
         },
         {
           title: 'Diablita',
-          src: '/img/5.jpeg',
+          src: pub('img/5.jpeg'),
           note: 'Intensidad, delineado y actitud: glamour con carácter.',
         },
         {
           title: 'Corazones en los ojos',
-          src: '/img/16.jpeg',
+          src: pub('img/16.jpeg'),
           note: 'Romántico y gráfico: el maquillaje como símbolo.',
         },
       ],
@@ -53,12 +56,12 @@ function App() {
       items: [
         {
           title: 'Glow suave',
-          src: '/img/4.jpeg',
+          src: pub('img/4.jpeg'),
           note: 'Piel luminosa, acabados pulidos y elegancia natural.',
         },
         {
           title: 'Noche chic',
-          src: '/img/8.jpeg',
+          src: pub('img/8.jpeg'),
           note: 'Brillo controlado + mirada protagonista.',
         },
       ],
@@ -68,7 +71,7 @@ function App() {
       items: [
         {
           title: 'Fantasmas',
-          src: '/img/15.jpeg',
+          src: pub('img/15.jpeg'),
           note: 'Texturas, sombras y narrativa para un look temático.',
         },
       ],
@@ -220,7 +223,7 @@ function App() {
               <figure className="hero-card">
                 <div className="hero-card-media">
                   <ArtworkFrame
-                    src="/img/1.jpeg"
+                    src={pub('img/1.jpeg')}
                     alt="Maquillaje artístico de Yulieth Anais"
                     label="Look destacado"
                   />
@@ -274,7 +277,7 @@ function App() {
               <div className="about-visual reveal">
                 <div className="about-photo">
                   <ArtworkFrame
-                    src="/img/4.jpeg"
+                    src={pub('img/4.jpeg')}
                     alt="Foto profesional de Yulieth Anais"
                     label="Sobre mí"
                   />
